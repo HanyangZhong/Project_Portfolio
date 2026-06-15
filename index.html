@@ -1,94 +1,388 @@
+```html
 <!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>钟汉阳 | 项目展示</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>钟汉阳 | 项目展示</title>
 
-    <style>
-        body {
-            max-width: 1100px;
-            margin: auto;
-            padding: 40px 20px;
-            font-family: Arial, sans-serif;
-            line-height: 1.8;
-            color: #333;
-        }
+  <style>
+    body {
+      max-width: 1150px;
+      margin: auto;
+      padding: 40px 22px;
+      font-family: Arial, "Microsoft YaHei", sans-serif;
+      line-height: 1.75;
+      color: #222;
+      background: #ffffff;
+    }
 
-        h1, h2 {
-            color: #1f4e79;
-        }
+    h1, h2, h3 {
+      color: #174a7c;
+    }
 
-        .intro {
-            background: #f5f7fa;
-            padding: 20px;
-            border-radius: 10px;
-        }
+    h1 {
+      font-size: 34px;
+      margin-bottom: 25px;
+    }
 
-        .project-card {
-            margin-top: 40px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 20px;
-        }
+    h2 {
+      margin-top: 42px;
+      border-bottom: 3px solid #174a7c;
+      padding-bottom: 6px;
+    }
 
-        .project-card img {
-            width: 100%;
-            border-radius: 8px;
-        }
+    .intro {
+      background: #f4f7fb;
+      padding: 22px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+    }
 
-        .tag {
-            display: inline-block;
-            background: #e8f0ff;
-            color: #1f4e79;
-            padding: 4px 10px;
-            margin-right: 8px;
-            border-radius: 20px;
-            font-size: 14px;
-        }
-    </style>
+    .project-card {
+      margin-top: 35px;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 24px;
+      background: #fff;
+    }
+
+    .project-card img {
+      width: 100%;
+      border-radius: 8px;
+      margin: 14px 0;
+      border: 1px solid #eee;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #e8f1ff;
+      color: #174a7c;
+      padding: 4px 10px;
+      margin: 4px 5px 4px 0;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+
+    .status {
+      font-weight: bold;
+      color: #9a3412;
+    }
+
+    .links a {
+      display: inline-block;
+      margin-right: 12px;
+      color: #0b63b6;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+    }
+
+    ul {
+      padding-left: 22px;
+    }
+      .image-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 16px 0;
+  }
+
+  .image-row img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #eee;
+  }
+
+  @media (max-width: 700px) {
+    .image-row {
+      grid-template-columns: 1fr;
+    }
+
+    .image-row img {
+      height: auto;
+    }
+  }
+  </style>
 </head>
 
 <body>
 
-    <h1>钟汉阳｜项目展示</h1>
+  <h1>钟汉阳｜项目展示</h1>
 
-    <div class="intro">
-        <p>
-            英国约克大学电子工程系机器人方向博士研究生（预计2026年毕业）。
-        </p>
+  <div class="intro">
+    <p>
+      英国约克大学电子工程系机器人方向博士研究生，预计于2026年毕业。
+      研究聚焦于具身智能场景下的接触丰富操作、多模态机器人学习、灵巧手设计、力觉感知、模仿学习与空间感知。
+    </p>
 
-        <p>
-            研究聚焦于具身智能场景下的接触丰富操作、多模态机器人学习、灵巧手设计、力觉感知、模仿学习与空间感知。
-        </p>
+    <p>
+      本页面整理了本人博士阶段及相关研究工作中的代表性项目，用于展示论文背后的真实机器人系统、实验平台与项目图片。
+    </p>
+  </div>
+
+  <h2>第一/共同第一作者在审稿件</h2>
+
+  <div class="project-card">
+    <h3>DexRemo：开放力感知灵巧手平台</h3>
+
+    <p>
+      <span class="tag">共同第一作者</span>
+      <span class="tag">灵巧操作</span>
+      <span class="tag">力觉感知</span>
+      <span class="tag">接触丰富操作</span>
+      <span class="tag">真实机器人系统</span>
+    </p>
+
+    <div class="image-row">
+    <img src="assets/img/dexremo/dexremo_01.jpg" alt="DexRemo image 1">
+    <img src="assets/img/dexremo/dexremo_02.jpg" alt="DexRemo image 2">
     </div>
 
-    <h2>代表性项目</h2>
+    <p>
+      面向接触丰富移除操作的开放式力感知灵巧手平台与评测套件，集成指尖力觉感知、灵巧手硬件设计、嵌入式控制与真实机器人操作实验。
+    </p>
 
-    <div class="project-card">
+    <p>
+      <strong>论文：</strong>
+      Zhong, H., et al. An Open Force-Sensing Hand Platform and Evaluation Suite for Contact-Rich Removal Manipulation.
+      <em>IEEE Transactions on Robotics (T-RO)</em>,
+      <span class="status">second-round review（二轮审稿中）</span>.
+    </p>
 
-        <h3>DexRemo：力感知灵巧手平台</h3>
+    <p>
+      <strong>本人贡献：</strong>
+      灵巧手平台设计、指尖力传感器开发、系统集成与接触丰富操作实验验证。
+    </p>
 
-        <p>
-            <span class="tag">具身智能</span>
-            <span class="tag">灵巧操作</span>
-            <span class="tag">力觉感知</span>
-        </p>
+    <p class="links">
+      <a href="#">Paper</a>
+      <a href="#">Video</a>
+      <a href="#">Code</a>
+    </p>
+  </div>
 
-        <img src="assets/img/dexremo/graphic_abstract.jpg">
+  <div class="project-card">
+    <h3>Hidden Force-Regime Coverage：接触丰富双臂模仿学习</h3>
 
-        <p>
-            面向接触丰富移除操作的腕部坐标系指尖力感知灵巧手平台。
-        </p>
+    <p>
+      <span class="tag">独立第一作者</span>
+      <span class="tag">双臂操作</span>
+      <span class="tag">模仿学习</span>
+      <span class="tag">遥操作示教</span>
+      <span class="tag">多模态感知</span>
+    </p>
 
-        <p>
-            <strong>论文：</strong>
-            IEEE Transactions on Robotics (T-RO), 二轮审稿中
-        </p>
-
+    <div class="image-row">
+    <img src="assets/img/force_regime/force_re01.jpg" alt="Force-Regime image 1">
+    <img src="assets/img/force_regime/force_re02.jpg" alt="Force-Regime image 2">
     </div>
+
+    <p>
+      针对接触丰富双臂操作任务中的隐式力域覆盖问题，构建双臂遥操作平台，结合视觉、力觉与本体感觉数据，完成示教采集、策略训练与真实机器人部署。
+    </p>
+
+    <p>
+      <strong>论文：</strong>
+      Zhong, H., et al. Hidden Force-Regime Coverage for Contact-Rich Bimanual Imitation Learning.
+      <em>Conference on Robot Learning (CoRL 2026)</em>,
+      <span class="status">under review（审稿中）</span>.
+    </p>
+
+    <p>
+      <strong>本人贡献：</strong>
+      双臂遥操作平台搭建、多模态数据采集、力觉感知系统设计、模仿学习算法验证与真实系统部署。
+    </p>
+
+    <p class="links">
+      <a href="#">Paper</a>
+      <a href="#">Video</a>
+      <a href="#">Code</a>
+    </p>
+  </div>
+
+  <div class="project-card">
+    <h3>StrucLine-SLAM：面向结构主导环境的全几何 SLAM 系统</h3>
+
+    <p>
+      <span class="tag">第一作者</span>
+      <span class="tag">SLAM</span>
+      <span class="tag">空间感知</span>
+      <span class="tag">线特征</span>
+      <span class="tag">结构化环境</span>
+    </p>
+
+    <div class="image-row">
+    <img src="assets/img/strucline-slam/slam1.jpg" alt="StrucLine-SLAM image 1">
+    <img src="assets/img/strucline-slam/slam2.jpg" alt="StrucLine-SLAM image 2">
+    </div>
+
+    <p>
+      面向走廊、车间、光伏场等结构主导低纹理环境，提出轻量化全几何 SLAM 系统，利用线特征与结构几何约束提升定位与建图鲁棒性。
+    </p>
+
+    <p>
+      <strong>论文：</strong>
+      Zhong, H., Wang, L., Post, M. StrucLine-SLAM: A Lightweight and Fully Geometric SLAM System for Structure-Dominant Environments.
+      <em>Robotics and Autonomous Systems (RAS)</em>,
+      <span class="status">under review（审稿中）</span>.
+    </p>
+
+    <p>
+      <strong>本人贡献：</strong>
+      提出线特征几何 SLAM 框架，开发结构感知特征匹配、建图与优化模块，并完成公开数据集和自采场景验证。
+    </p>
+
+    <p class="links">
+      <a href="#">Paper</a>
+      <a href="#">Video</a>
+      <a href="#">Code</a>
+    </p>
+  </div>
+
+  <h2>共同作者代表性论文</h2>
+
+  <div class="project-card">
+    <h3>MLLM-Fabric：多模态大模型驱动的布料分拣机器人系统</h3>
+
+    <p>
+      <span class="tag">RA-L</span>
+      <span class="tag">ICRA 2026 展示</span>
+      <span class="tag">多模态大模型</span>
+      <span class="tag">机器人感知</span>
+      <span class="tag">布料操作</span>
+    </p>
+
+    <div class="image-row">
+    <img src="assets/img/strucline-slam/slam1.jpg" alt="StrucLine-SLAM image 1">
+    <img src="assets/img/strucline-slam/slam2.jpg" alt="StrucLine-SLAM image 2">
+    </div>
+
+    <p>
+      基于多模态大语言模型的织物分拣与选取机器人框架，将视觉感知、语言推理、提示词设计与机器人决策相结合。
+    </p>
+
+    <p>
+      <strong>论文：</strong>
+      Wang, L., Zhong, H., Wang, T., Luo, S., Zhu, J. MLLM-Fabric: Multimodal Large Language Model-Driven Robotic Framework for Fabric Sorting and Selection.
+      <em>IEEE Robotics and Automation Letters (RA-L)</em>, 2025.
+    </p>
+
+    <p>
+      <strong>本人贡献：</strong>
+      多模态布料数据采集、模型微调支持、推理问题与提示词设计，并作为 ICRA 2026 poster presenter 展示该工作。
+    </p>
+
+    <p class="links">
+      <a href="https://doi.org/10.1109/LRA.2025.3625506">DOI</a>
+      <a href="#">Video</a>
+      <a href="#">Code</a>
+    </p>
+  </div>
+
+  <h2>第一/共同第一作者代表性论文</h2>
+
+  <div class="project-card">
+    <h3>BRU：缓解大语言模型选择题中的认知偏差</h3>
+
+    <p>
+      <span class="tag">共同第一作者</span>
+      <span class="tag">CogSci 2025</span>
+      <span class="tag">大语言模型</span>
+      <span class="tag">认知偏差</span>
+      <span class="tag">多智能体辩论</span>
+    </p>
+
+    <img src="assets/img/bru/graphic_abstract.jpg" alt="BRU Graphic Abstract">
+
+    <p>
+      针对大语言模型在多选题推理中的认知偏差问题，研究多智能体辩论与推理机制对模型鲁棒性和实用性的影响。
+    </p>
+
+    <p>
+      <strong>论文：</strong>
+      Zhong, H., et al. Balancing Rigor and Utility: Mitigating Cognitive Biases in Large Language Models for Multiple-Choice Questions.
+      <em>Proceedings of the Cognitive Science Society</em>, 2025.
+    </p>
+
+    <p class="links">
+      <a href="https://escholarship.org/uc/item/2vr690cx">Paper</a>
+    </p>
+  </div>
+
+  <div class="project-card">
+    <h3>FENet：面向车道线检测的聚焦增强网络</h3>
+
+    <p>
+      <span class="tag">共同第一作者</span>
+      <span class="tag">ICME 2024 Oral</span>
+      <span class="tag">自动驾驶</span>
+      <span class="tag">计算机视觉</span>
+      <span class="tag">车道线检测</span>
+    </p>
+
+    <img src="assets/img/fenet/graphic_abstract.jpg" alt="FENet Graphic Abstract">
+
+    <p>
+      面向复杂道路场景的车道线检测网络，通过增强车道线特征表达，提高复杂视觉条件下的检测鲁棒性。
+    </p>
+
+    <p>
+      <strong>论文：</strong>
+      Zhong, H., et al. FENet: Focusing Enhanced Network for Lane Detection.
+      <em>Proceedings of IEEE ICME 2024</em>, Oral Paper.
+    </p>
+
+    <p class="links">
+      <a href="https://doi.org/10.1109/ICME57554.2024.10687857">DOI</a>
+      <a href="#">Code</a>
+    </p>
+  </div>
+
+  <div class="project-card">
+    <h3>LLM-SAP：基于情境感知的大语言模型机器人规划</h3>
+
+    <p>
+      <span class="tag">共同第一作者</span>
+      <span class="tag">ICMEW 2024</span>
+      <span class="tag">大语言模型</span>
+      <span class="tag">机器人规划</span>
+      <span class="tag">情境感知</span>
+    </p>
+
+    <img src="assets/img/llm_sap/graphic_abstract.jpg" alt="LLM-SAP Graphic Abstract">
+
+    <p>
+      研究大语言模型在机器人情境感知与任务规划中的应用，关注上下文理解、任务推理与安全决策能力。
+    </p>
+
+    <p>
+      <strong>论文：</strong>
+      Zhong, H., et al. LLM-SAP: Large Language Models Situational Awareness Based Planning.
+      <em>ICME 2024 Workshop</em>.
+    </p>
+
+    <p class="links">
+      <a href="https://doi.org/10.1109/ICMEW63481.2024.10645429">DOI</a>
+      <a href="#">Code</a>
+    </p>
+  </div>
+
+  <h2>项目能力总结</h2>
+
+  <ul>
+    <li>真实机器人平台搭建与系统集成</li>
+    <li>灵巧手、力觉传感器与多模态感知系统开发</li>
+    <li>遥操作示教、模仿学习与机器人学习策略部署</li>
+    <li>SLAM、空间感知与结构化环境建图</li>
+    <li>视觉-语言-动作模型与具身智能系统验证</li>
+  </ul>
 
 </body>
-
 </html>
+```
