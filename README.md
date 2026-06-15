@@ -1,9 +1,8 @@
 ---
-
 layout: page
-title: 项目展示
-permalink: /projects/
----------------------
+title: "项目展示"
+---
+
 
 # 项目展示
 
@@ -25,13 +24,10 @@ IEEE Transactions on Robotics, 二轮审稿中, 2026.
 
 <p align="center">
   <img src="/assets/img/dexremo/dexremo_1.png" width="45%">
-  <img src="/assets/img/projects/dexremo_hand.jpg" width="45%">
+  <img src="/assets/img/dexremo/dexremo_2.jpg" width="45%">
 </p>
 
-<p align="center">
-  <img src="/assets/img/projects/dexremo_force_sensor.jpg" width="45%">
-  <img src="/assets/img/projects/dexremo_experiment.jpg" width="45%">
-</p>
+
 
 DexRemo 是一个面向接触丰富移除操作任务的力感知灵巧手平台。系统集成了自研指尖力传感器、腕部坐标系力表示、嵌入式控制、机械结构设计与真实机器人操作实验。
 
@@ -53,14 +49,11 @@ DexRemo 是一个面向接触丰富移除操作任务的力感知灵巧手平台
 Conference on Robot Learning, 审稿中, 2026.
 
 <p align="center">
-  <img src="/assets/img/projects/bimanual_platform.jpg" width="45%">
-  <img src="/assets/img/projects/teleoperation_demo.jpg" width="45%">
+  <img src="/assets/img/force_regime/force_re1.png" width="45%">
+  <img src="/assets/img/force_regime/force_re2.png" width="45%">
 </p>
 
-<p align="center">
-  <img src="/assets/img/projects/force_regime.jpg" width="45%">
-  <img src="/assets/img/projects/policy_rollout.jpg" width="45%">
-</p>
+
 
 该项目研究接触丰富双臂操作任务中的隐式力域覆盖问题，结合双臂遥操作平台、多模态传感器、示教数据采集、模仿学习训练与真实机器人策略部署。
 
