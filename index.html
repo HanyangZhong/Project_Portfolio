@@ -131,12 +131,12 @@
     }
 
     .image-row img {
-      width: 100%;
-      height: 230px;
-      object-fit: cover;
-      border-radius: 8px;
-      border: 1px solid #eee;
-    }
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
 
     @media (max-width: 700px) {
       body {
@@ -151,9 +151,13 @@
         grid-template-columns: 1fr;
       }
 
-      .image-row img {
-        height: auto;
-      }
+      .image-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 12px 0;
+  align-items: start;
+}
     }
   </style>
 </head>
@@ -424,6 +428,7 @@
     </p>
 
     <img src="assets/img/sap/sap1.png" alt="LLM-SAP">
+    <img src="assets/img/sap/sap2.png" alt="LLM-SAP">
 
     <p>
       研究大语言模型在机器人情境感知与任务规划中的应用，关注上下文理解、任务推理与安全决策能力。
@@ -440,15 +445,6 @@
     </p>
   </div>
 
-  <h2>项目能力总结</h2>
-
-  <ul>
-    <li>真实机器人平台搭建与系统集成</li>
-    <li>灵巧手、力觉传感器与多模态感知系统开发</li>
-    <li>遥操作示教、模仿学习与机器人学习策略部署</li>
-    <li>SLAM、空间感知与结构化环境建图</li>
-    <li>视觉-语言-动作模型与具身智能系统验证</li>
-  </ul>
 
 </body>
 </html>
