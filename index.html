@@ -123,19 +123,73 @@
       padding-left: 22px;
     }
 
-    .image-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin: 12px 0;
-    }
+.image-row {
+  display: grid;
+  gap: 12px;
+  margin: 12px 0;
+  align-items: center;
+}
 
-    .image-row img {
-  width: 100%;
+.image-row.two-equal {
+  grid-template-columns: 1fr 1fr;
+}
+
+.image-row.left-wide {
+  grid-template-columns: 1.35fr 0.65fr;
+}
+
+.image-row.right-wide {
+  grid-template-columns: 0.65fr 1.35fr;
+}
+
+.image-box {
+  height: 300px;
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.image-box img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
   height: auto;
   object-fit: contain;
-  border-radius: 8px;
-  border: 1px solid #eee;
+  border: none;
+  margin: 0;
+}
+
+.image-box.tall {
+  height: 420px;
+}
+
+.image-box.short {
+  height: 240px;
+}
+
+.image-box.medium {
+  height: 320px;
+}
+
+@media (max-width: 700px) {
+  .image-row,
+  .image-row.two-equal,
+  .image-row.left-wide,
+  .image-row.right-wide {
+    grid-template-columns: 1fr;
+  }
+
+  .image-box,
+  .image-box.tall,
+  .image-box.short,
+  .image-box.medium {
+    height: auto;
+  }
 }
 
     @media (max-width: 700px) {
@@ -147,17 +201,7 @@
         font-size: 30px;
       }
 
-      .image-row {
-        grid-template-columns: 1fr;
-      }
 
-      .image-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  margin: 12px 0;
-  align-items: start;
-}
     }
   </style>
 </head>
@@ -210,9 +254,19 @@
       <span class="tag">真实机器人系统</span>
     </p>
 
-    <div class="image-row">
+    <!-- <div class="image-row">
     <img src="assets/img/dexremo/dexremo_1.png" alt="DexRemo image 1">
     <img src="assets/img/dexremo/dexremo_2.jpg" alt="DexRemo image 2">
+    </div> -->
+
+    <div class="image-row two-equal">
+    <div class="image-box short">
+        <img src="assets/img/dexremo/dexremo_1.jpg" alt="DexRemo platform">
+    </div>
+
+    <div class="image-box tall">
+        <img src="assets/img/dexremo/dexremo_2.jpg" alt="DexRemo robot experiment">
+    </div>
     </div>
 
     <p>
@@ -247,10 +301,21 @@
       <span class="tag">多模态感知</span>
     </p>
 
-    <div class="image-row">
+    <!-- <div class="image-row">
     <img src="assets/img/force_regime/force_re1.png" alt="Force-Regime image 1">
     <img src="assets/img/force_regime/force_re2.png" alt="Force-Regime image 2">
+    </div> -->
+
+    <div class="image-row two-equal">
+    <div class="image-box medium">
+        <img src="assets/img/force_regime/force_re1.jpg" alt="Force-Regime platform">
     </div>
+
+    <div class="image-box medium">
+        <img src="assets/img/force_regime/force_re2.jpg" alt="Force-Regime robot experiment">
+    </div>
+    </div>
+
 
     <p>
       针对接触丰富双臂操作任务中的隐式力域覆盖问题，构建双臂遥操作平台，结合视觉、力觉与本体感觉数据，完成示教采集、策略训练与真实机器人部署。
@@ -284,10 +349,21 @@
       <span class="tag">结构化环境</span>
     </p>
 
-    <div class="image-row">
+    <!-- <div class="image-row">
     <img src="assets/img/strucline-slam/slam1.jpg" alt="StrucLine-SLAM image 1">
     <img src="assets/img/strucline-slam/slam2.png" alt="StrucLine-SLAM image 2">
+    </div> -->
+
+    <div class="image-row two-equal">
+    <div class="image-box medium">
+        <img src="assets/img/strucline-slam/slam1.jpg" alt="StrucLine-SLAM platform">
     </div>
+
+    <div class="image-box medium">
+        <img src="assets/img/strucline-slam/slam2.png" alt="StrucLine-SLAM experiment">
+    </div>
+    </div>
+
 
     <p>
       面向走廊、车间、光伏场等结构主导低纹理环境，提出轻量化全几何 SLAM 系统，利用线特征与结构几何约束提升定位与建图鲁棒性。
