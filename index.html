@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>钟翰扬 | 项目展示</title>
+  <title>Hanyang Zhong | Research Projects</title>
 
   <style>
     body {
@@ -233,12 +233,12 @@
 <body>
 
   <div class="lang-switch" aria-label="Language switcher">
-    <button class="lang-btn active" data-set-lang="zh">中文</button>
-    <button class="lang-btn" data-set-lang="en">English</button>
+    <button class="lang-btn active" data-set-lang="en">English</button>
+    <button class="lang-btn" data-set-lang="zh">中文</button>
   </div>
 
   <main>
-    <section data-lang="zh" class="active-lang">
+    <section data-lang="zh">
   <div class="hero">
   <p class="hero-label">Robotics · Embodied AI · Dexterous Manipulation</p>
   <h1>钟翰扬 Hanyang Zhong</h1>
@@ -621,7 +621,7 @@
 
 
     </section>
-    <section data-lang="en">
+    <section data-lang="en" class="active-lang">
   <div class="hero">
     <p class="hero-label">Robotics · Embodied AI · Dexterous Manipulation</p>
     <h1>Hanyang Zhong</h1>
@@ -770,8 +770,9 @@
     const savedLanguage = localStorage.getItem('preferredLanguage');
     if (savedLanguage === 'en' || savedLanguage === 'zh') {
       setLanguage(savedLanguage);
+    } else {
+      setLanguage('en');
     }
   </script>
 </body>
 </html>
-
