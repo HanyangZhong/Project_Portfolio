@@ -203,11 +203,42 @@
 
 
     }
+  
+    .lang-switch {
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+      margin: 8px 0 14px;
+    }
+    .lang-btn {
+      border: 1px solid #174a7c;
+      background: #fff;
+      color: #174a7c;
+      padding: 6px 12px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-weight: 700;
+    }
+    .lang-btn.active {
+      background: #174a7c;
+      color: #fff;
+    }
+    [data-lang] { display: none; }
+    [data-lang].active-lang { display: block; }
+    span[data-lang].active-lang { display: inline; }
+
   </style>
 </head>
 
 <body>
 
+  <div class="lang-switch" aria-label="Language switcher">
+    <button class="lang-btn active" data-set-lang="zh">中文</button>
+    <button class="lang-btn" data-set-lang="en">English</button>
+  </div>
+
+  <main>
+    <section data-lang="zh" class="active-lang">
   <div class="hero">
   <p class="hero-label">Robotics · Embodied AI · Dexterous Manipulation</p>
   <h1>钟翰扬 Hanyang Zhong</h1>
@@ -323,7 +354,7 @@
     <p>
       <strong>论文：</strong>
       <em>Zhong, H.</em>, et al. Hidden Force-Regime Coverage for Contact-Rich Bimanual Imitation Learning.
-      <em>Conference on Robot Learning (CoRL 2026)</em>,
+      <em>IEEE International Conference on Robotics and Automation (ICRA 2027)</em>,
       <span class="status">under review（审稿中）</span>.
     </p>
 
@@ -589,6 +620,158 @@
   </div>
 
 
+    </section>
+    <section data-lang="en">
+  <div class="hero">
+    <p class="hero-label">Robotics · Embodied AI · Dexterous Manipulation</p>
+    <h1>Hanyang Zhong</h1>
+    <p class="hero-subtitle">
+      PhD Candidate in Robotics | Contact-Rich Manipulation | Multimodal Robot Learning | Seeking Postdoctoral Opportunities
+    </p>
+  </div>
+
+  <div class="intro">
+    <p>
+      I am a PhD candidate in Robotics in the Department of Electronic Engineering at the University of York, UK, and expect to graduate in <strong>December 2026</strong>. My research focuses on contact-rich manipulation in embodied intelligence, multimodal robot learning, dexterous hand design, force sensing, imitation learning, and spatial perception.
+    </p>
+    <p>
+      This page highlights representative projects from my PhD and related research, with an emphasis on real robotic systems, experimental platforms, algorithm design, and model improvements. The work spans contact-rich manipulation, imitation learning, multimodal perception, large-model fine-tuning and knowledge distillation, post-hoc reasoning, deep model architecture design, and geometric SLAM.
+    </p>
+    <p>
+      <strong>I am actively seeking postdoctoral research opportunities.</strong> I welcome discussions with faculty members and research groups working on embodied intelligence, multimodal robot learning, dexterous manipulation, force sensing, and robot perception. 📧 <strong>Email:</strong> <a href="mailto:hanyangzhong552@gmail.com">hanyangzhong552@gmail.com</a>
+    </p>
+  </div>
+
+  <h2>First / Co-First Author Manuscripts Under Review</h2>
+
+  <div class="project-card">
+    <h3>DexRemo: An Open Force-Sensing Dexterous Hand Platform</h3>
+    <p>
+      <span class="tag">Co-First Author</span><span class="tag">Dexterous Manipulation</span><span class="tag">Force Sensing</span><span class="tag">Dexterous-Hand Imitation Learning</span><span class="tag">Contact-Rich Manipulation</span><span class="tag">Real Robot System</span>
+    </p>
+    <div class="image-row left-wide">
+      <div class="image-box tall"><img src="assets/img/dexremo/dexremo_1.png" alt="DexRemo platform"></div>
+      <div class="image-box tall"><img src="assets/img/dexremo/dexremo_2.jpg" alt="DexRemo robot experiment"></div>
+    </div>
+    <p>
+      To address contact-state changes that are difficult to observe visually in contact-rich removal tasks, I developed an open force-sensing dexterous-hand platform. Fingertip 3D force measurements are transformed from local finger frames into a unified wrist frame, reducing representation noise caused by changing multi-finger configurations. Building on this platform, the ACT imitation-learning framework was extended to fuse vision, proprioception, fingertip pose, and force signals for closed-loop dexterous removal on a real robot.
+    </p>
+    <p><strong>Paper:</strong> <em>Zhong, H.</em>, et al. An Open Force-Sensing Hand Platform and Evaluation Suite for Contact-Rich Removal Manipulation. <em>IEEE Transactions on Robotics (T-RO)</em>, <span class="status">second-round review</span>.</p>
+    <p><strong>My contribution:</strong> Led the mechanical design of the dexterous hand, the 3D fingertip force sensors, embedded control, and system integration; proposed and implemented the wrist-frame force representation; modified ACT to fuse vision, proprioception, fingertip pose, and force; and conducted real-robot experiments and ablations across nine classes of contact-rich removal tasks.</p>
+    <p class="links"><a href="https://anonymous-view.github.io/DexRemo-webpage/">Project Page</a></p>
+  </div>
+
+  <div class="project-card">
+    <h3>Hidden Force-Regime Coverage: Contact-Rich Bimanual Imitation Learning</h3>
+    <p>
+      <span class="tag">First Author</span><span class="tag">Bimanual Manipulation</span><span class="tag">Imitation Learning</span><span class="tag">Teleoperation Demonstrations</span><span class="tag">Multimodal Perception</span>
+    </p>
+    <div class="image-row two-equal">
+      <div class="image-box medium"><img src="assets/img/force_regime/force_re1.png" alt="Force-Regime platform"></div>
+      <div class="image-box medium"><img src="assets/img/force_regime/force_re2.png" alt="Force-Regime robot experiment"></div>
+    </div>
+    <p>
+      This work studies hidden force-regime generalization in contact-rich bimanual imitation learning, where tasks may look visually identical while differing substantially in physical resistance. I developed a programmable resistance device and a bimanual teleoperation data-collection platform, then systematically analyzed how demonstrations from different force regimes affect ACT policy generalization. The results reveal a notable downward-transfer property: demonstrations collected under higher resistance can generalize effectively to lower-resistance task conditions.
+    </p>
+    <p><strong>Paper:</strong> <em>Zhong, H.</em>, et al. Hidden Force-Regime Coverage for Contact-Rich Bimanual Imitation Learning. <em>IEEE International Conference on Robotics and Automation (ICRA 2027)</em>, <span class="status">under review</span>.</p>
+    <p><strong>My contribution:</strong> Independently designed the programmable hidden-force-regime apparatus and bimanual contact-rich manipulation tasks; built the teleoperation demonstration and multimodal data-acquisition system; trained ACT policies combining vision, proprioception, joint torque, and fingertip force; and conducted systematic experiments on upward/downward transfer, fixed-budget mixed demonstrations, and real-bottle validation.</p>
+    <p class="links"><a href="https://force-regime.github.io/Force-Regime/">Project Page</a></p>
+  </div>
+
+  <div class="project-card">
+    <h3>StrucLine-SLAM: A Fully Geometric SLAM System for Structure-Dominant Environments</h3>
+    <p><span class="tag">First Author</span><span class="tag">SLAM</span><span class="tag">Spatial Perception</span><span class="tag">Line Features</span><span class="tag">Structured Environments</span></p>
+    <div class="image-row right-wide">
+      <div class="image-box tall"><img src="assets/img/strucline-slam/slam1.jpg" alt="StrucLine-SLAM platform"></div>
+      <div class="image-box tall"><img src="assets/img/strucline-slam/slam2.png" alt="StrucLine-SLAM experiment"></div>
+    </div>
+    <p>For low-texture yet highly structured environments such as corridors, workshops, and photovoltaic sites, I designed a lightweight fully geometric SLAM framework that relies on line features, structural priors, and geometric constraints rather than heavy learning components, improving localization and mapping robustness in structure-dominant scenes.</p>
+    <p><strong>Paper:</strong> <em>Zhong, H.</em>, Wang, L., Post, M. StrucLine-SLAM: A Lightweight and Fully Geometric SLAM System for Structure-Dominant Environments. <em>Robotics and Autonomous Systems (RAS)</em>, <span class="status">under review</span>.</p>
+    <p><strong>My contribution:</strong> Proposed the lightweight fully geometric framework; designed the line-feature extraction, structural-prior constraints, feature matching, mapping, and optimization modules; and completed implementation, public-dataset evaluation, and validation in self-collected structured environments.</p>
+    <p class="links"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6506801">Paper</a><a href="https://anonymous.4open.science/r/SLAM-C7BA/README.md">Project Page</a></p>
+  </div>
+
+  <h2>Representative Co-Authored Paper</h2>
+  <div class="project-card">
+    <h3>MLLM-Fabric: Multimodal LLM-Driven Robotic Fabric Sorting</h3>
+    <p><span class="tag">RA-L</span><span class="tag">ICRA 2026 Presentation</span><span class="tag">Multimodal LLM</span><span class="tag">Knowledge Distillation</span><span class="tag">Robot Tactile Perception</span></p>
+    <div class="image-row two-equal">
+      <div class="image-box tall"><img src="assets/img/mllm-fabric/fabric_3.png" alt="MLLM-Fabric platform"></div>
+      <div class="image-box tall"><img src="assets/img/mllm-fabric/fabric_4.jpg" alt="MLLM-Fabric experiment"></div>
+    </div>
+    <p>To address the difficulty of jointly interpreting vision, tactile sensing, and pressure information for robotic fabric selection, this work develops a multimodal large-language-model framework for fabric sorting. Supervised fine-tuning, pairwise preference modeling, and explanation-guided knowledge distillation enable interpretable comparison and selection based on physical material properties.</p>
+    <p><strong>Paper:</strong> Wang, L., <em>Zhong, H.</em>, Wang, T., Luo, S., Zhu, J. MLLM-Fabric: Multimodal Large Language Model-Driven Robotic Framework for Fabric Sorting and Selection. <em>IEEE Robotics and Automation Letters (RA-L)</em>, 2025.</p>
+    <p><strong>My contribution:</strong> Contributed to multimodal fabric data collection and the robotic experimental system; designed physical-property comparison tasks, reasoning questions, and prompting workflows; participated in supervised fine-tuning, pairwise preference modeling, and explanation-guided knowledge distillation; and presented the work as an ICRA 2026 poster presenter.</p>
+    <p class="links"><a href="https://ieeexplore.ieee.org/abstract/document/11217170">DOI</a><a href="https://www.youtube.com/watch?v=VeN7tr4-WvM">Video</a></p>
+  </div>
+
+  <h2>Representative First / Co-First Author Papers</h2>
+  <div class="project-card">
+    <h3>FENet: Focusing Enhanced Network for Lane Detection</h3>
+    <p><span class="tag">Co-First Author</span><span class="tag">ICME 2024 Oral</span><span class="tag">Autonomous Driving</span><span class="tag">Computer Vision</span><span class="tag">Lane Detection</span></p>
+    <div class="image-row two-equal">
+      <div class="image-box medium"><img src="assets/img/fenet/Figure1.png" alt="FENet platform"></div>
+      <div class="image-box medium"><img src="assets/img/fenet/Figure2.png" alt="FENet experiment"></div>
+    </div>
+    <p>For distant and thin lane markings that are easily overlooked by deep models in complex road scenes, FENet improves the feature-pyramid structure, sampling strategy, and regression loss. Focusing Sampling, Enhanced FPN, and Directional IoU Loss strengthen modeling of critical far-range regions and directional errors.</p>
+    <p><strong>Paper:</strong> <em>Zhong, H.</em>, et al. FENet: Focusing Enhanced Network for Lane Detection. <em>Proceedings of IEEE ICME 2024</em>, Oral Paper.</p>
+    <p><strong>My contribution:</strong> Proposed the Focusing Sampling strategy, Partial Field of View Evaluation, and Directional IoU Loss; contributed to FPN improvements and deep-model training, with a focus on distant thin lanes, directional error, and complex curved-road scenarios.</p>
+    <p class="links"><a href="https://doi.org/10.1109/ICME57554.2024.10687857">DOI</a><a href="https://github.com/HanyangZhong/FENet">Code</a></p>
+  </div>
+
+  <div class="project-card">
+    <h3>BRU: Mitigating Cognitive Biases in LLM Multiple-Choice Reasoning</h3>
+    <p><span class="tag">Co-First Author</span><span class="tag">CogSci 2025</span><span class="tag">Large Language Models</span><span class="tag">Cognitive Bias</span><span class="tag">Multi-Agent Debate</span></p>
+    <div class="image-row left-wide">
+      <div class="image-box tall"><img src="assets/img/bru/bru_01.png" alt="BRU platform"></div>
+      <div class="image-box tall"><img src="assets/img/bru/bru_02.png" alt="BRU experiment"></div>
+    </div>
+    <p>This work addresses cognitive bias and overconfidence in LLM multiple-choice reasoning by developing an evaluation and reasoning framework with heuristic moderation, bias inspection, and abstention mechanisms, allowing models to reduce incorrect answers and improve reliability under uncertainty.</p>
+    <p><strong>Paper:</strong> Zhong, H., et al. Balancing Rigor and Utility: Mitigating Cognitive Biases in Large Language Models for Multiple-Choice Questions. <em>Proceedings of the Cognitive Science Society</em>, 2025.</p>
+    <p><strong>My contribution:</strong> Co-developed the cognitive-bias evaluation framework and BRU dataset; designed heuristic moderation, bias inspection, and abstention mechanisms; and participated in inference experiments, metric design, and analysis across GPT-4, Gemini, LLaMA, and related models.</p>
+    <p class="links"><a href="https://escholarship.org/uc/item/2vr690cx">Paper</a></p>
+  </div>
+
+  <div class="project-card">
+    <h3>LLM-SAP: Situational-Awareness-Based Robot Planning with LLMs</h3>
+    <p><span class="tag">Co-First Author</span><span class="tag">ICMEW 2024</span><span class="tag">Large Language Models</span><span class="tag">Robot Planning</span><span class="tag">Situational Awareness</span></p>
+    <div class="image-row two-equal">
+      <div class="image-box tall"><img src="assets/img/sap/sap1.png" alt="LLM-SAP platform"></div>
+      <div class="image-box tall"><img src="assets/img/sap/sap2.png" alt="LLM-SAP experiment"></div>
+    </div>
+    <p>For semantic understanding and safe reasoning in open-world robot task planning, this work proposes an LLM planning framework based on situational awareness. Multi-agent feedback, state-transition generation, and consequence-risk evaluation help the model generate safer multi-step action plans in complex human-object-environment contexts.</p>
+    <p><strong>Paper:</strong> Zhong, H., et al. LLM-SAP: Large Language Models Situational Awareness Based Planning. <em>ICME 2024 Workshop</em>.</p>
+    <p><strong>My contribution:</strong> Co-designed the situational-awareness-based planning framework; constructed safety-risk scenarios, state-transition generation, feedback evaluation, and multi-agent reasoning processes; and contributed to prompt design and evaluation of LLM planning and safety decision-making.</p>
+    <p class="links"><a href="https://doi.org/10.1109/ICMEW63481.2024.10645429">DOI</a></p>
+  </div>
+    </section>
+  </main>
+
+  <script>
+    const langButtons = document.querySelectorAll('[data-set-lang]');
+    const langSections = document.querySelectorAll('[data-lang]');
+
+    function setLanguage(lang) {
+      langSections.forEach(section => {
+        section.classList.toggle('active-lang', section.dataset.lang === lang);
+      });
+      langButtons.forEach(button => {
+        button.classList.toggle('active', button.dataset.setLang === lang);
+      });
+      document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+      document.title = lang === 'zh' ? '钟翰扬 | 项目展示' : 'Hanyang Zhong | Research Projects';
+      localStorage.setItem('preferredLanguage', lang);
+    }
+
+    langButtons.forEach(button => {
+      button.addEventListener('click', () => setLanguage(button.dataset.setLang));
+    });
+
+    const savedLanguage = localStorage.getItem('preferredLanguage');
+    if (savedLanguage === 'en' || savedLanguage === 'zh') {
+      setLanguage(savedLanguage);
+    }
+  </script>
 </body>
 </html>
 
