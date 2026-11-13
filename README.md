@@ -19,8 +19,8 @@ title: "项目展示"
 **关键词：** 灵巧操作｜力觉感知｜接触丰富操作｜机器人硬件｜真实机器人系统
 
 **对应论文：**
-*DexRemo: A Wrist-Frame Fingertip Force Sensing Hand Platform for Contact-Rich Removal Manipulation*
-IEEE Transactions on Robotics, 二轮审稿中, 2026.
+*DexRemo: A Force-Sensing Hand Platform and Task Suite for Contact-Rich Removal Manipulation*
+IEEE Transactions on Robotics (T-RO), 已接收, 2026.（共同第一作者）[项目主页](https://dexremo.github.io/)
 
 <p align="center">
   <img src="/assets/img/dexremo/dexremo_1.png" width="45%">
@@ -46,7 +46,7 @@ DexRemo 是一个面向接触丰富移除操作任务的力感知灵巧手平台
 
 **对应论文：**
 *Hidden Force-Regime Coverage for Contact-Rich Bimanual Imitation Learning*
-Conference on Robot Learning, 审稿中, 2026.
+IEEE International Conference on Robotics and Automation (ICRA 2027), 审稿中.
 
 <p align="center">
   <img src="/assets/img/force_regime/force_re1.png" width="45%">
